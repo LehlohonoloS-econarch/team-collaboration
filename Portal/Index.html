@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EconArch - Service Request Portal</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header class="header">
+         <img src="logo-white_econarch-removebg-preview.png" alt="Company Logo" class="logo" />
+    </header>
+    
+    <!-- Form inputs -->
+      <div class="container">
+            <h1>Service Request Portal</h1>
+            
+            <div class="form-container">
+                <form id="serviceRequestForm">
+                    <div class="form-group">
+                        <label for="caseTitle">Case Title<span>*</span></label>
+                        <input type="text" id="caseTitle" name="caseTitle" required placeholder="Brief description of your request">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="caseDescription">Case Description<span>*</span></label>
+                        <textarea id="caseDescription" name="caseDescription" required placeholder="Please provide detailed information about your request"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address<span>*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="Your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                            <label for="company">Company<span>*</span></label>
+                            <select id="company" name="company" required>
+                                <option value="" disabled selected>Select your company</option>
+                                <option value="Alteram Solutions">Alteram Solutions</option>
+                                <option value="BonPro Test">BonPro Test</option>
+                                <option value="Chimera Holdings">Chimera Holdings</option>
+                                <option value="EconArch Consulting and IT Services">EconArch Consulting and IT Services</option>
+                                <option value="Gauteng Infrastructure Financing Agency">Gauteng Infrastructure Financing Agency</option>
+                                <option value="Letjeka Consulting">Letjeka Consulting</option>
+                                <option value="Mavulane Consulting">Mavulane Consulting</option>
+                                <option value="MNP Inc. Chartered Accountants (SA)">MNP Inc. Chartered Accountants (SA)</option>
+                                <option value="National Department of Health">National Department of Health</option>
+                                <option value="NTG Solutions (Pty) Ltd">NTG Solutions (Pty) Ltd</option>
+                                <option value="Property Practitioners Regulatory Authority">Property Practitioners Regulatory Authority</option>
+                                <option value="Renaissance Accounting">Renaissance Accounting</option>
+                                <option value="Safety and Security Sector Education and Training Authority">Safety and Security Sector Education and Training Authority</option>
+                                <option value="South African Bureau of Standards">South African Bureau of Standards</option>
+                            </select>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="https://econarch.com" class="btn btn-secondary">Return to EconArch Website</a>
+                        <button type="submit" class="btn">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- js link -->
+        <script src="script.js"></script>
+
+        <!-- Success Modal -->
+<div id="successModal" class="success-modal">
+    <div class="success-content">
+        <div class="checkmark-circle">
+            <div class="checkmark"></div>
+        </div>
+        <div class="success-message">Your service request has been submitted successfully!</div>
+        
+        <div class="case-details">
+            <p><strong>Case Title:</strong> <span id="successCaseTitle"></span></p>
+            <p><strong>Submitted by:</strong> <span id="successEmail"></span></p>
+            <p><strong>Company:</strong> <span id="successCompany"></span></p>
+        </div>
+        
+        <button class="ok-button" onclick="closeSuccessModal()">OK</button>
+    </div>
+</div>
+
+</body>
+</html>
